@@ -21,7 +21,7 @@ def read_item(item_id: int, q: Optional[str] = None):
    return {"item_id": item_id, "q": q}
 
 @app.post("/predict")
-def make_predictions(dataModel):
+def make_predictions(dataModel:DataModel):
     df = pd.DataFrame(dataModel.dict(), columns=dataModel.dict().keys(), index=[0])
     df.columns = dataModel.columns()
     model = load("assets/triened_model.joblib")
