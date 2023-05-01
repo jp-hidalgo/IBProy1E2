@@ -11,4 +11,4 @@ class DataModel(BaseModel):
     hotel: str
 #Esta función retorna los nombres de las columnas correspondientes con el modelo esxportado en joblib.
     def columns(self):
-        return ["","title","rating", "review_text","location","hotel"]
+        return ["id","title","rating", "review_text","location","hotel"]
